@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const SimpleCalculatorApp());
+  runApp(const ScientificCalculatorApp());
 }
 
-class SimpleCalculatorApp extends StatelessWidget {
-  const SimpleCalculatorApp({super.key});
+class ScientificCalculatorApp extends StatelessWidget {
+  const ScientificCalculatorApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // title: 'Simple Calculator',
+      // title: ' Calculator',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -52,10 +52,10 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
   double _evaluate(String expression) {
     // Very simple evaluation using Dart's 'Expression' (not full parser)
     // Use a real expression parser like math_expressions in future!
-    return double.parse(_simpleCalc(expression).toString());
+    return double.parse(_SciCalc(expression).toString());
   }
 
-  num _simpleCalc(String expr) {
+  num _SciCalc(String expr) {
     // Supports single operations like 12+5, 8*9 etc.
     if (expr.contains('+')) {
       var parts = expr.split('+');
@@ -95,7 +95,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
     ];
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Simple Calculator')),
+      appBar: AppBar(title: const Text('Sicientific Calculator')),
       body: Column(
         children: [
           Expanded(
